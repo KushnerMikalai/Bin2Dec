@@ -1,0 +1,79 @@
+/*TODO convert to css-module*/
+.change-theme {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    /* font-size: calc(1px + (80 - 64) * (100vw - 320px) / (960 - 320)); */
+    font-size: 1rem;
+}
+
+.change-theme__input {
+    background: linear-gradient(145deg, var(--base1, black), var(--base2, black));
+    border-radius: 0.75em;
+    box-shadow: inset 6px 6px 16px var(--base2), inset -6px -6px 16px var(--base1);
+    color: #fdea7b;
+    display: inline-flex;
+    align-items: center;
+    margin: auto;
+    padding: 0.15em;
+    width: 3em;
+    height: 1.5em;
+    font-size: 1em;
+    line-height: 1;
+    transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.change-theme__input:before,
+.change-theme__input:after {
+    content: '';
+    display: block;
+}
+
+.change-theme__input:before {
+    background-color: #d7d7d7;
+    border-radius: 50%;
+    width: 1.2em;
+    height: 1.2em;
+    transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    z-index: 1;
+}
+
+.change-theme__input:after {
+    background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.15) 0) 0 50% / 50% 100%,
+    repeating-linear-gradient(90deg, #bbb 0, #bbb, #bbb 20%, #999 20%, #999 40%) 0 50% / 50% 100%,
+    radial-gradient(circle at 50% 50%, #888 25%, transparent 26%);
+    background-repeat: no-repeat;
+    border: 0.25em solid transparent;
+    border-left: 0.4em solid #d8d8d8;
+    border-right: 0 solid transparent;
+    transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+    transform: translateX(-22.5%);
+    transform-origin: 25% 50%;
+    width: 1.2em;
+    height: 1em;
+}
+
+/* Checked */
+.change-theme__input:checked {
+    background: linear-gradient(145deg, var(--base1), var(--base2));
+    box-shadow: inset 6px 6px 16px var(--base2), inset -6px -6px 16px var(--base1);
+}
+
+.change-theme__input:checked:before {
+    background-color: currentColor;
+    transform: translateX(125%);
+}
+
+.change-theme__input:checked:after {
+    border-left-color: currentColor;
+    transform: translateX(-2.5%) rotateY(180deg);
+}
+
+.change-theme__input:focus {
+    outline: 0;
+}

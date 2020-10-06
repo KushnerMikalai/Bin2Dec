@@ -1,0 +1,26 @@
+.light {
+    --success: #67c23a;
+    --danger: #f56c6c;
+    --info: #909399;
+    --warning: #e6a23c;
+
+    --primary-text: #303133;
+    --regular-text: #606266;
+    --secondary-text: #909399;
+    --placeholder-text: #c0c4cc;
+
+    --base1: #d8dee8;
+    --base2: #788daf;
+    --base3: #e5e7e9;
+}
+
+.dark {
+    --primary-text: #d1d3d8;
+    --regular-text: #bbc0c9;
+    --secondary-text: #a8abb3;
+    --placeholder-text: #d6dae2;
+
+    --base1: #262626;
+    --base2: #000000;
+    --base3: #4d4d4d;
+}

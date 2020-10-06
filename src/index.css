@@ -1,13 +1,111 @@
-body {
+/*body {*/
+/*  margin: 0;*/
+/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',*/
+/*    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',*/
+/*    sans-serif;*/
+/*  -webkit-font-smoothing: antialiased;*/
+/*  -moz-osx-font-smoothing: grayscale;*/
+/*}*/
+
+/*code {*/
+/*  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
+/*    monospace;*/
+/*}*/
+
+:root {
+  --success: #67c23a;
+  --danger: #f56c6c;
+  --info: #909399;
+  --warning: #e6a23c;
+
+  --fz-extra-small: 0.78rem;
+  --fz-small: 0.82rem;
+  --fz-base: 0.88rem;
+  --fz-medium: 1rem;
+  --fz-large: 1.1rem;
+  --fz-extra-large: 1.2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.root {
+  position: relative;
+}
+
+.app {
+  background: radial-gradient(150% 150% at 0% 20%, var(--base1, black) 20%, var(--base2, black));
+  color: var(--primary-text);
+}
+
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 27rem;
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  color: var(--danger);
+  display: none;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 0;
+  text-align: center;
 }
